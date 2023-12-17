@@ -1,0 +1,382 @@
+*{
+    margin:0;
+    border: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+#header{
+    background-image: url(images/OIP__1_-removebg-preview\ \(1\)\ \(1\)\ \(1\).png);
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 480px;
+    background-position: 780px;
+}
+
+.container{
+    padding: 10px 30px;
+}
+
+.container nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+.img-avt{
+    padding: 30px 0;
+    padding-left: 890px;
+}
+
+nav ul li a{
+    color: rgb(167, 88, 204);
+    font-size: 20px;
+    text-decoration: none;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: pink;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.home-txt{
+    width: 700px;
+    padding-top: 250px;
+    font-size: 33px;
+}
+
+.home-txt h1 span{
+    color: rgb(151, 73, 207);
+    text-shadow: 2px 4px 4px rgba(115, 236, 255, 0.747);
+}
+
+.home-txt h2{
+    font-size: 30px;
+    color: rgb(127, 229, 255);
+    text-shadow: 2px 4px 4px rgba(215, 115, 255, 0.747);
+}
+
+.img{
+    width: 30%;
+    height: 90%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}
+
+.img img{
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+}
+
+.img:hover .girl-avt{
+    left: 35%;
+}
+
+.home-txt .download-btn{
+    padding: 7px 25px;
+    border-radius: 5px;
+    color: black;
+    font-size: 16px;
+    background-color: plum;
+    box-shadow: 5px 4px 4px rgba(115, 232, 255, 0.747);
+}
+
+button:hover::after{
+    background-color: blueviolet;
+    box-shadow: none;
+}
+
+.about{
+    background-image: url(images/Untitled_design__1_-removebg-preview\ \(2\)\ \(1\)\ \(1\).png);
+    background-repeat: no-repeat;
+    background-size: 700px;
+    margin-top: 5%;
+    z-index: -99;
+}
+
+.about .title h1{
+    color: rgb(204, 101, 255);
+    text-align:end;
+    padding-right: 450px;
+    font-size: 40px;
+}
+
+.about .abt-img2{
+    position: absolute;  
+    width: 25%;
+    height: 80%;
+    bottom: 0;
+    left: 270px; 
+    top:115%; 
+    transform:translateX(-10%); 
+    transition: bottom 1s,left 1s
+}
+
+.about .abt-img2:hover{
+    left: 25%;
+}
+
+.abt-h2{
+    margin-left: 54%;
+    color: rgb(127, 229, 255);
+    text-shadow: 5px 4px 4px rgba(220, 115, 255, 0.747);
+    font-size: 26px;
+}
+
+.about .title p{
+    margin-left: 54%;
+    padding-right: 30px;
+    padding-top: 5px;
+}
+
+.abt-titles{
+    text-decoration-line: underline;
+    text-decoration-color: pink;
+    text-decoration-style:dashed;
+}
+
+.tab-links{
+    margin-right: 50px;
+    position: relative;
+    padding-top: 5px;
+    color: rgb(156, 85, 198);
+    font-size: 20px;
+}
+
+.tab-contents ul li{
+    padding-top: 10px;
+    padding-left: 705px;
+    list-style:none;
+}
+
+.section-title{
+    font-size: 40px;
+    padding: 40px;
+    color: rgb(148, 54, 192);
+}
+
+.services-container{
+    grid-template-columns: repeat(3, 390px);
+    column-gap: 2rem;
+    justify-content: center;
+    display: grid;
+    grid-column: 1;
+    grid-row: 2/5;
+}
+
+.services-item{
+    position: relative;
+    height: 700px;
+    box-shadow: 20px 20px 20px rgba(216, 105, 207, 0.437);
+    padding: 20px 20px 20px 20px;
+    background-color: rgba(247, 247, 247, 0.122);
+    border-radius: 9px;
+}
+
+.services-item .services-title{
+    font-size: 30px;
+    color: aquamarine;
+    text-shadow: 5px 4px 4px rgba(220, 115, 255, 0.747);
+    font-weight: 800;
+    margin: 20px 0;
+}
+
+.services-modal{
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0 1px;
+    background-color: transparent;
+    z-index: 999999;
+    backdrop-filter: blur(10px);
+}
+
+.services-modal-body{
+    position: relative;
+    background-color: transparent;
+    border: 2px solid rgb(99, 199, 219);
+    max-width: 600px;
+    margin: 20px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 5px 4px 4px rgba(220, 115, 255, 0.747);
+    transition: 1s;
+}
+
+.services-modal-body:hover{
+    transform: scale(1.1);
+    background-color: black;
+}
+
+.services-modal-title{
+    color: rgb(154, 73, 192);
+    padding-bottom: 10px;
+    font-size: 20px;
+    text-decoration-line: underline;
+    text-decoration-color: pink;
+    text-decoration-style:dashed;
+}
+
+.seperation{
+    padding-top: 70px;
+}
+
+.section-heading{
+    font-size: 30px;
+    padding: 10px 0px 10px 40px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+    text-shadow: 5px 4px 4px rgb(167, 255, 248);;
+}
+
+.container-1{
+    padding-left:100px;
+    align-items: center;
+    padding-bottom: 60px;
+}
+
+.back-container{
+    display: grid;
+    grid-column: 1;
+    grid-row: 2/5;
+    grid-template-columns: repeat(3, 390px);
+    column-gap: 2rem;
+    row-gap: 3rem;
+    backdrop-filter: blur(40px);
+    margin-right:6.2%;
+}
+
+.image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    border-radius: 5%;
+}
+
+.row{
+    border: 2px solid rgb(127, 227, 255);
+    width: 90%;
+    border-radius: 5%;
+    background-color: black;
+    transition: 1s;
+    box-shadow: 15px 10px 4px rgba(0, 0, 0, 0.747);
+}
+
+.row:hover{
+    transform: scale(.9);
+    background-color: rgb(96, 8, 96);
+}
+
+.contact-title{
+    font-size: 30px;
+    padding-top: 30px;
+    color: rgb(118, 53, 178);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4.2rem;
+}
+
+.contact{
+    background-image: url(images/Untitled\ design\ \(1\).png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 770px;
+}
+
+.contact-form form{
+    position: relative;
+    width: 400px;
+}
+
+.contact-form{
+    backdrop-filter: blur(30px);
+    margin-left: 410px;
+    margin-right: 400px;
+    height: 80vh;
+    border-radius: 15px;
+    border: 1px solid ;
+}
+
+form input, form textarea{
+    width: 100%;
+    padding: 20px;
+    border: 1px solid rgb(109, 228, 249);
+    background-color: rgb(44, 44, 44);
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.send-btn{
+    width: 440px;
+    background-color: rgb(150, 89, 208);
+    font-size: 18px;
+    padding: 7px;
+    border: 0;
+    cursor: pointer;
+}
+
+.projects{
+    background: url(images/Untitled\ design\ \(3\).png);
+    background-size: contain;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
